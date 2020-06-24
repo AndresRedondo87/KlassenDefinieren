@@ -1,5 +1,9 @@
 ﻿/*****************************************
- TIC-TAC-TOE
+ 
+            //Video 32 Versionskontrolle (Git) - Das Sicherheitsnetz für deinen Taschenrechner
+            // das habe ich schon eigentlich selber erledigt!!!
+            
+TIC-TAC-TOE
   A   B   C
 0   |   |
  ---+---+---
