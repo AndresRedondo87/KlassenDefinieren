@@ -53,15 +53,24 @@ namespace KlassenDefinieren
             
             meinAuto.alterInJahren = 13;
             meinAuto.marke = "Audi";
+            meinAuto.aktuelleGeschwindigkeitInKM = 55;
 
             deinAuto.alterInJahren = 1;
             deinAuto.marke = "Porsche";
+            deinAuto.aktuelleGeschwindigkeitInKM = 45;
+
+
+            meinAuto.AktuelleGeschwAnzeigen();
+            deinAuto.AktuelleGeschwAnzeigen();
 
             /// Die Methoden sind grundsaetzlich zu ein Objekt oder eine Klasse aufgerufen(90% auf Objekten).
             /// die methode istSchnell ist nicht unter meinAuto verfügbar, da es private definiert worden ist.
             /// die methode BeschleunigeAuf100KmH ist  unter meinAuto verfügbar, da es public definiert worden ist.
             meinAuto.BeschleunigeAuf100KmH();
             deinAuto.BeschleunigeAuf100KmH();
+
+            meinAuto.AktuelleGeschwAnzeigen();
+            deinAuto.AktuelleGeschwAnzeigen();
         }
     }
 }
