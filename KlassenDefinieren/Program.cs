@@ -45,16 +45,21 @@ namespace KlassenDefinieren
     {
         static void Main(string[] args)
         {
+            /// Video 69, Objekte anlegen und verändern
+            /// Uebersetzung: ich will ein neues Objekt der klasse Auto erstellen, mit Name meinAuto. 
+            /// Es ist dann ein neue Instanz von der Klasse Auto  erstellt mit erstmal keine "()" besondere eigenschaften
             Auto meinAuto = new Auto();     //jedes Objekt ist eine neue Instanz von die Auto Klasse: mein und dein Auto
             Auto deinAuto = new Auto();
-
-            //die methode istSchnell ist nicht unter meinAuto verfügbar, da es private definiert worden ist.
+            
             meinAuto.alterInJahren = 13;
             meinAuto.marke = "Audi";
 
             deinAuto.alterInJahren = 1;
             deinAuto.marke = "Porsche";
 
+            /// Die Methoden sind grundsaetzlich zu ein Objekt oder eine Klasse aufgerufen(90% auf Objekten).
+            /// die methode istSchnell ist nicht unter meinAuto verfügbar, da es private definiert worden ist.
+            /// die methode BeschleunigeAuf100KmH ist  unter meinAuto verfügbar, da es public definiert worden ist.
             meinAuto.BeschleunigeAuf100KmH();
             deinAuto.BeschleunigeAuf100KmH();
         }
