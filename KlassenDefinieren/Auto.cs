@@ -17,7 +17,7 @@ namespace KlassenDefinieren
         /// 1 muss zugriffsmodifizierer:
         /// Public muss definiert werden, sonst bleibt es internal als default.
         /// dann variablentyp und dann variablenname, kleingechrieben.
-        public string marke;
+        private string marke;   //Updated in Video 73, da es nicht geandert sein konnen sollte
         public int alterInJahren;
         private double aktuelleGeschwindigkeitInKM;
         ///aktuelle geschw. als private weil wir es nur innen brauchen, wird nur von innen geaendert, nie von ausserhalb von der klasse.
@@ -33,9 +33,31 @@ namespace KlassenDefinieren
 
         ///METHODEN
         /// Methode, alle erst grossgeschrieben.
+        /// 
+
+        /// <summary>
+        /// Video 73 Konstruktoren: Um den Inhalt von Atributen zu schuetzen von falschen eingaben, Datenkapselung
+        /// </summary>
+        /// 
+        public Auto(string autoMarke)
+        {
+            // wir koennen auch die eingegebenen werte ueberpruefen, zB. hier akzeptieren wir nur Audi und Prosche als akzeptierte Marken:
+            if((autoMarke == "Porsche")|| (autoMarke == "Audi"))
+            {
+                marke = autoMarke;
+            }
+            else
+            {
+                marke = "nicht unterstütze Marke";
+            }
+            alterInJahren = 0;
+            aktuelleGeschwindigkeitInKM = 0;
+        }
+
         /// <summary>
         /// BeschleunigeAuf100KmH
         /// </summary>
+        /// 
         public void BeschleunigeAuf100KmH()
         {
             if (this.IstSchnell())       //hier innerhalb Auto Klasse dürfen wir doch IstSchnell aufrufen.
@@ -46,7 +68,7 @@ namespace KlassenDefinieren
             /// und auch um Quellcode zu lesen und verstehen.
             {
                 aktuelleGeschwindigkeitInKM = 100;
-                Console.WriteLine("Habe schnell beschleunigt!");
+                Console.WriteLine("Der {0} hat schnell beschleunigt!!YEAH!!!", this.marke);
             }
             else
             {
@@ -58,7 +80,7 @@ namespace KlassenDefinieren
                 {
                     aktuelleGeschwindigkeitInKM = 100;
                 }
-                Console.WriteLine("Habe normal beschleunigt!!YEAH!!");
+                Console.WriteLine("Der {0} hat normal beschleunigt", this.marke);
             }
 
         }
@@ -68,7 +90,7 @@ namespace KlassenDefinieren
         /// </summary>
         public void AktuelleGeschwAnzeigen()
         {
-            Console.WriteLine("Die aktuelle Geschwindigkeit ist: {0}", this.aktuelleGeschwindigkeitInKM);
+            Console.WriteLine("Die aktuelle Geschwindigkeit von der {1}  ist: {0}", this.aktuelleGeschwindigkeitInKM, this.marke);
             return;
         }
 
