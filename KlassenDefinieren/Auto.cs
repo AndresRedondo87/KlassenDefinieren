@@ -8,9 +8,21 @@ namespace KlassenDefinieren
 {
     public class Auto
     {
-        public string marke;
-        public int alterInJahren;
+        /// 1 muss zugriffsmodifizierer:
+        /// Public muss definiert werden, sonst bleibt es internal als default.
+        /// 2 muss class und dann Klassenname(grossgeschrieben)
+        /// 
 
+        ///Attribute:
+        /// 1 muss zugriffsmodifizierer:
+        /// Public muss definiert werden, sonst bleibt es internal als default.
+        /// dann variablentyp und dann variablenname, kleingechrieben.
+        public string marke;
+        public int alterInJahren;       
+
+        /// <summary>
+        /// Methode, alle erst grossgeschrieben.
+        /// </summary>
         public void BeschleunigeAuf100KmH()
         {
             if (this.IstSchnell())       //hier innerhalb Auto Klasse dürfen wir doch IstSchnell aufrufen.
