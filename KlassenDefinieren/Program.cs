@@ -38,9 +38,9 @@ using System.Threading.Tasks;
 
 namespace KlassenDefinieren
 {
-    //auto Klasse haben wirvon hier rausgeschnitten, dann rechte maus auf Klassendefinieren/Hinzufügen/Klasse und da die klasse einfach umbennant. 
-    //Jetzt ist ein getrennte Klassen Datei Auto.cs
-
+    /// Video 68 auto Klasse haben wirvon hier rausgeschnitten, dann rechte maus auf Klassendefinieren/Hinzufügen/Klasse und da die klasse einfach umbennant. 
+    ///Jetzt ist ein getrennte Klassen Datei Auto.cs
+    /// Am besten immer nur eine Klase Pro datei. so bleit alles sauberer und mit bessere Nachverfolgbarkeit
     class Program
     {
         static void Main(string[] args)

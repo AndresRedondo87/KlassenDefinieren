@@ -13,19 +13,23 @@ namespace KlassenDefinieren
         /// 2 muss class und dann Klassenname(grossgeschrieben)
         /// 
 
-        ///Attribute:
+        ///ATTRIBUTEN:
         /// 1 muss zugriffsmodifizierer:
         /// Public muss definiert werden, sonst bleibt es internal als default.
         /// dann variablentyp und dann variablenname, kleingechrieben.
         public string marke;
-        public int alterInJahren;       
+        public int alterInJahren;
 
-        /// <summary>
+        ///METHODEN
         /// Methode, alle erst grossgeschrieben.
+        /// <summary>
+        /// BeschleunigeAuf100KmH
         /// </summary>
         public void BeschleunigeAuf100KmH()
         {
             if (this.IstSchnell())       //hier innerhalb Auto Klasse dürfen wir doch IstSchnell aufrufen.
+                /// wie ist es mit den this?
+                /// Um sicher zu gehen dass es auf die richtige Methode/Attribute bearbeitet/aufgerufen wird.
             {
                 Console.WriteLine("Habe schnell beschleunigt!");
             }
@@ -36,7 +40,7 @@ namespace KlassenDefinieren
 
         }
 
-        private bool IstSchnell()   //private Methoden wird nur innerhalb von diese Klasse verfügbar
+        private bool IstSchnell()   //private Methoden wird nur innerhalb von diese Klasse verfügbar!!
         {
             if (marke == "Porsche")
             {
