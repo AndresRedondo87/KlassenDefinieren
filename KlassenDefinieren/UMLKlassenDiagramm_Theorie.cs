@@ -45,6 +45,24 @@ namespace KlassenDefinieren
         ///  
         ///  
 
+        /// Video 77 Model View Controller (MVC)- Design nach Mustern
+        /// .
+        /// .
+        /// .   Benutzer  ---- interagiert ----  VIEW
+        ///                                    /     \
+        ///                                   /       \
+        ///                         Eingabe/Ausgabe   holt Daten
+        ///                                 /            \
+        ///                                /              \
+        /// .                       CONTROLLER-- aendert--MODEL
+        /// 
+        /// Um die Klassen besser zu strukturieren in OOP-bzw.OODesign
+        /// Der benutzer interagiert grundsaetzlich mit den View (via Ein/Ausgaben)
+        /// View zeigt die Daten die von Model geholt werden
+        /// Der Controller kennt den View und damit kontrolliert er die Ein/Ausgaben und damit kann er das Model fuettern.
+        /// Pfeile von Controller alle aus, von benutzer nach View und von view nach Model.
+        /// Dieses Diagramm ist so gut wie eine Philosophie...
+        /// Wird aber eigentlich gebraucht um der Design sauberer zu kriegen wenn wir dann entwickeln.
     }
 
 }
