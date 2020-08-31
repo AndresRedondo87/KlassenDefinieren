@@ -50,7 +50,6 @@ namespace KlassenDefinieren
             /// Es ist dann ein neue Instanz von der Klasse Auto  erstellt mit erstmal keine "()" besondere eigenschaften
             //Auto meinAuto = new Auto();     //jedes Objekt ist eine neue Instanz von die Auto Klasse: mein und dein Auto
             //Auto deinAuto = new Auto();
-
             /// Video 73 Konstruktoren: jetzt der Kompiler hat kein standard Konstruktor mehr erzeugt da wir eins definiert haben, 
             /// deswegen sind die alte definitionen nicht mehr brauchbar.
             /// Die Attributen marke und aktuelleGeschwindigkeitInKM sind jetzt auch von aussen nocht mehr zu Aendern moeglich
@@ -58,16 +57,18 @@ namespace KlassenDefinieren
             Auto deinAuto = new Auto("Porsche");
             Auto andereAuto = new Auto("Renault");
 
-            meinAuto.alterInJahren = 13;
+            meinAuto.AlterInJahren = 13;
             //meinAuto.marke = "Audi";
             //meinAuto.aktuelleGeschwindigkeitInKM = 55;
 
-            deinAuto.alterInJahren = 1;
+            deinAuto.AlterInJahren = 1;
             //deinAuto.marke = "Porsche";
             //deinAuto.aktuelleGeschwindigkeitInKM = 45;
 
 
-            andereAuto.alterInJahren = 25;
+            andereAuto.AlterInJahren = 25;
+            /// Video 74 Eigenschaften -  von ausserhalb von Auto klasse haben wir kein Zugriff mehr auf alterInJahren Attribut
+            /// aber wir haben Zugriff auf den Eigenschaft AlterInJahren die es mit get/set aendern kann.
 
 
             meinAuto.AktuelleGeschwAnzeigen();
