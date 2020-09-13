@@ -218,6 +218,17 @@ namespace KlassenDefinieren
             }
 
 
+
+            /// Video 108 ToString() Methode - Objekte in String umwandeln ANGEPASSTE ToString!!
+            Console.WriteLine();
+            Console.WriteLine();
+            //Console.WriteLine(meinAuto.ToString());
+            //Console.WriteLine(deinAuto.ToString());
+            //Console.WriteLine(andereAuto.ToString());// ToString ist nicht immer noetig, da es implizit ist, Beispiel hier unter.
+            Console.WriteLine(meinAuto);
+            Console.WriteLine(deinAuto);
+            Console.WriteLine(andereAuto);
+
             Console.ReadKey();
         }
     }

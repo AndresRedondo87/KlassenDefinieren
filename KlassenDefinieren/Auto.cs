@@ -70,6 +70,27 @@ namespace KlassenDefinieren
         /// 
 
         /// <summary>
+        /// Video 108 ToString() Methode - Objekte in String umwandeln
+        /// </summary>
+        /// 
+        public override string ToString()   // mit den override aendern wir das original ToString zu unsere Wuensche.
+            // Diese ToString wird auch die Private Eigenschaften ausgeben koennen
+        {
+            //Console.WriteLine($"Marke: {this.Marke}");
+            //Console.WriteLine($"Alter In Jahren: {this.AlterInJahren}");
+            //Console.WriteLine($"aktuelle Geschwindigkeit InKM: {this.aktuelleGeschwindigkeitInKM}");
+            //return base.ToString(); //base ist von vererbung usw...
+            //Diese oben fuer die Darstellung direkt in Konsole
+
+            // um dieses string so intern zu benutzen aber nicht direkt in cw zu verwenden
+            string resultat = $"Marke: {this.Marke}" + Environment.NewLine;
+            resultat += $"Alter In Jahren: {this.AlterInJahren}" + Environment.NewLine;
+            resultat += $"aktuelle Geschwindigkeit InKM: {this.aktuelleGeschwindigkeitInKM}" + Environment.NewLine;
+            return resultat;
+
+        }
+
+        /// <summary>
         /// Video 73 Konstruktoren: Um den Inhalt von Atributen zu schuetzen von falschen eingaben, Datenkapselung
         /// </summary>
         /// 
