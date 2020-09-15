@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace KlassenDefinieren
 {
@@ -98,16 +99,29 @@ namespace KlassenDefinieren
 
         }
 
+
+        /// Video 114 Folge 5 Objekte Speichern und laden.
+        /// Erster Versuch zu speichern Eigentlich hier ist es zum laden :/
+        public Auto(string csvString)
+        {
+            string[] csvEntries = csvString.Split(',');
+
+            Marke = csvEntries[0];
+            aktuelleGeschwindigkeitInKM = Convert.ToInt32(csvEntries[1]);
+            AlterInJahren = Convert.ToInt32(csvEntries[2]);
+        }
+
         /// <summary>
         /// Video 73 Konstruktoren: Um den Inhalt von Atributen zu schuetzen von falschen eingaben, Datenkapselung
         /// </summary>
         /// 
-        public Auto(string autoMarke)
-        {
-            Marke = autoMarke;
-            AlterInJahren = 0;
-            aktuelleGeschwindigkeitInKM = 0;
-        }
+        //public Auto(string autoMarke)     //Veraltet seit video 114
+        //{
+        //    Marke = autoMarke;
+        //    AlterInJahren = 0;
+        //    aktuelleGeschwindigkeitInKM = 0;
+        //}
+
 
         /// <summary>
         /// BeschleunigeAuf100KmH
@@ -145,7 +159,7 @@ namespace KlassenDefinieren
         /// </summary>
         public void AktuelleGeschwAnzeigen()
         {
-            Console.WriteLine("Die aktuelle Geschwindigkeit von der {1}  ist: {0}", this.aktuelleGeschwindigkeitInKM, this.marke);
+            Console.WriteLine("Die aktuelle Geschwindigkeit von der {1} ist: {0}", this.aktuelleGeschwindigkeitInKM, this.marke);
             return;
         }
 
@@ -158,7 +172,19 @@ namespace KlassenDefinieren
 
             return false;
         }
+
+        ///
+        /// Video 114 Folge 5 Objekte Speichern und laden.
+        /// Erster Versuch zu speichern
+        public string ToCsvString()
+        {
+            return $"Marke:{Marke}, Geschw.InKmH:{aktuelleGeschwindigkeitInKM},AlterJahre{AlterInJahren}";//funktioniert
+        }
+
+
+
     }
+
 
 }
 
