@@ -178,7 +178,7 @@ namespace KlassenDefinieren
         /// Erster Versuch zu speichern
         public string ToCsvString()
         {
-            return $"Marke:{Marke}, Geschw.InKmH:{aktuelleGeschwindigkeitInKM},AlterJahre{AlterInJahren}";//funktioniert
+            return $"{Marke},{aktuelleGeschwindigkeitInKM},{AlterInJahren}";//funktioniert, anzeige duerfen nicht mehr da sein
         }
 
 

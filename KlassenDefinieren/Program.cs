@@ -62,25 +62,45 @@ namespace KlassenDefinieren
             //Auto deinAuto = new Auto("Porsche");//Veraltet seit video 114
             //Auto andereAuto = new Auto("Renault");//Veraltet seit video 114
 
-            /// Video 114 Folge 5 Objekte Speichern und laden.
-            /// Erster Versuch zu speichern
-            Auto meinAuto = new Auto("Audi,50,15");
+            Auto meinAuto, deinAuto, andereAuto;
 
-            Auto deinAuto = new Auto("Porsche,85,1");
+            if (File.Exists(nameUndPfadAutoDatei))
+            {
+                //string computerAsCsvString = File.ReadAllText(nameUndPfadComputerDatei);
+                IEnumerable<string> AutoAsCsvString = File.ReadLines(nameUndPfadAutoDatei,Encoding.UTF8);
+                 meinAuto = new Auto(AutoAsCsvString.First());
+                //deinAuto = new Auto(AutoAsCsvString.First()+1);  //dies Funktioniert natuerlich nicht
+                //andereAuto = new Auto(AutoAsCsvString.First()+2);
+                deinAuto = new Auto(AutoAsCsvString.Skip(1).First());
+                andereAuto = new Auto(AutoAsCsvString.Skip(2).First());
 
-            Auto andereAuto = new Auto("AndereMarke,70,5");
+                /// Loesung aus Internet gefunden in:
+                /// https://stackoverflow.com/questions/8759849/get-previous-and-next-item-in-a-ienumerable-using-linq
+                /// Koennte noch sauberer sein aber fuer dieses Beispiel mit 3 ist schon genug glaube ich
+            }
+            else
+            { /// Video 114 Folge 5 Objekte Speichern und laden.
+              /// Erster Versuch zu speichern
+                //Auto meinAuto = new Auto("Audi,50,15");
+                //Auto deinAuto = new Auto("Porsche,85,1");
+                //Auto andereAuto = new Auto("AndereMarke,70,5");
+                 meinAuto = new Auto("Audi,50,15");
+                 deinAuto = new Auto("Porsche,85,1");
+                 andereAuto = new Auto("AndereMarke,70,5");
 
-            meinAuto.AlterInJahren = 14;
-            //meinAuto.marke = "Audi";
-            //meinAuto.aktuelleGeschwindigkeitInKM = 55;
+                meinAuto.AlterInJahren = 14;
+                //meinAuto.marke = "Audi";
+                //meinAuto.aktuelleGeschwindigkeitInKM = 55;
 
-            deinAuto.AlterInJahren = 2;
-            //deinAuto.marke = "Porsche";
-            //deinAuto.aktuelleGeschwindigkeitInKM = 45;
+                deinAuto.AlterInJahren = 2;
+                //deinAuto.marke = "Porsche";
+                //deinAuto.aktuelleGeschwindigkeitInKM = 45;
 
-            andereAuto.AlterInJahren = 6;
-            /// Video 74 Eigenschaften -  von ausserhalb von Auto klasse haben wir kein Zugriff mehr auf alterInJahren Attribut
-            /// aber wir haben Zugriff auf den Eigenschaft AlterInJahren die es mit get/set aendern kann.
+                andereAuto.AlterInJahren = 6;
+                /// Video 74 Eigenschaften -  von ausserhalb von Auto klasse haben wir kein Zugriff mehr auf alterInJahren Attribut
+                /// aber wir haben Zugriff auf den Eigenschaft AlterInJahren die es mit get/set aendern kann.
+            }
+
 
 
             meinAuto.AktuelleGeschwAnzeigen();
