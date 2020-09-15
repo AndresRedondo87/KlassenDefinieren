@@ -179,6 +179,7 @@ namespace KlassenDefinieren
         public string ToCsvString()
         {
             return $"{Marke},{aktuelleGeschwindigkeitInKM},{AlterInJahren}";//funktioniert, anzeige duerfen nicht mehr da sein
+            //IN DIE CSV NUR DIE KOMMA,KEINE DARSTELLUNG; KEINE INFO; KEIN TAB; KEIN LEERZEICHEN SONST FUNKTIONIERT DEN SPLIT NICHT MEHR
         }
 
 
